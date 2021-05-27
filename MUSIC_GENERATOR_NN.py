@@ -169,13 +169,6 @@ def TrainModel ( batch_size, total_epochs ) :
             loss.backward()
             optimizer.step()
 
-            # Using the loss function as the sum of individual losses in the initial training epochs
-            # was observed to produce absolutely negligible improvements in the accuracy of any of 
-            # the three variables (note category, duration, offset). So it is advised to use the following
-            # "commented" loss function in the early stages of training that focuses on improving accuracy
-            # of only one of the three variables at any step. In the later epochs, once all the three 
-            # accuracies cross say 90%, the above loss function must be used in order to avoid any bias.
-
             # if ( loss_notes > loss_offsets and loss_notes > loss_durations ) :
             #     optimizer.zero_grad()
             #     loss_notes.backward()
