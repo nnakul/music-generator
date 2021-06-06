@@ -11,4 +11,5 @@ Though a *music generation model* could be trained on a collection of music piec
 &nbsp;&nbsp;&nbsp;<img src="https://user-images.githubusercontent.com/66432513/120914984-eac81880-c6be-11eb-9718-29497bd005fb.png" width = '400' height = '320'>
 &nbsp;<img src="https://user-images.githubusercontent.com/66432513/120914981-e996eb80-c6be-11eb-956a-c14d75916b6d.png" width = '400' height = '320'>
 
-Another model was trained on the music *Final Fantasy VIII 0fithos* (*MUSIC_ORIGINAL/1.mid*).
+( Another model was trained on the music *Final Fantasy VIII 0fithos*, *MUSIC_ORIGINAL/1.mid* )
+
