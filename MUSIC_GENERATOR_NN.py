@@ -168,7 +168,17 @@ def TrainModel ( batch_size, total_epochs ) :
             optimizer.zero_grad()
             loss.backward()
             optimizer.step()
-
+            
+            # The following is an alternative loss function where the one classification out of the three that
+            # performs the worst (with maximum loss) is given the consideration. This proved to be effective because
+            # the number of classes of types is much more than the number of classes of durations or relative offsets.
+            # Keeping loss equal to the sum of the three classification losses in this case initially causes a lot of
+            # bias by just improving the classification for the attributes that have lesser number of target classes.
+            # After few epochs, change the loss function and then once the accuracies of all the three classifications
+            # reaches say 95%, you may change the loss function back to the "sum of three losses".
+            
+            # Check the accuracy progresses in README.md to observed the impact of changing loss functions.
+            
             # if ( loss_notes > loss_offsets and loss_notes > loss_durations ) :
             #     optimizer.zero_grad()
             #     loss_notes.backward()
